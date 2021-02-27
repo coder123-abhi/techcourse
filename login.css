@@ -1,0 +1,42 @@
+body{
+    color:white;
+}
+h1{
+    background-color:blue;
+    color:rgb(219, 219, 127);
+    text-align:center;
+    vertical-align:top;
+    text-shadow:2px 2px 2px yellow;
+    }
+
+    table{
+        margin-top:150px;
+background-color:blueviolet;
+border:none;
+height:70%;
+width:70%;
+
+    }
+
+    #sub{
+        color:rgb(223, 97, 97);
+      border:none;
+      background-color:rgb(126, 226, 126);
+      font-size:15px;
+      border-radius:6px;
+      margin-top:20px;
+      padding-left:40px;
+      padding-right:40px;
+        
+    }
+    #res{
+        color:rgb(223, 97, 97);
+        border:none;
+        background-color:rgb(126, 226, 126);
+        font-size:15px;
+        border-radius:6px;
+        margin-top:20px;
+        padding-left:40px;
+        padding-right:40px;
+          
+    }

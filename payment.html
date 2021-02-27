@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>payment</title>
+<link rel="stylesheet" href="payment.css">
+</head>
+<body>
+<form>
+<header>
+<h1 id="h1">Payment Section</h1>
+<table align="center">
+<caption><u><font color="brown">Non-veg</font></u></caption>
+<tr>
+<th>Please choose from the given options:</th>
+</tr>
+<tr>
+<th>
+<select id="sym1">
+<option>Macaroni</option>
+<option>pizza(chicken/bacon)</option>
+<option>burger(chicken/bacon)</option>
+<option>Biryani(chicken/mutton)</option>
+<option>Taco(chicken/mutton)</option>
+<option>Mutton Kulcha</option>
+<option>Puri Mutton</option>
+<option>Keema pav</option>
+<option>Lasagna</option>
+</th>
+</tr>
+<tr>
+<th>With GST of 5%</th>
+</tr>
+<tr>
+<th><input type="text"  id="amt1"></th>
+</tr>
+<tr>
+<th><button onclick="dis1()">find amount</button></th>
+</tr>
+</table><br><br>
+<table align="center">
+<caption><u><font color="green">Veg</font></u></caption>
+<tr>
+<th>Please choose from the given options:</th>
+</tr>
+<tr>
+<th>
+<select id="sym2">
+<option>Pizza farm house</option>
+<option>Cheese cottage Taco</option>
+<option>burger</option>
+<option>Veg Biryani</option>
+<option>Parathaa(aloo/paneer/methi)</option>
+<option>Chole Bhature</option>
+<option>Papdi Chaat</option>
+<option>Veg Lasagna</option>
+</select>
+</th>
+</tr>
+<tr>
+<th>With GST of 5%</th>
+</tr>
+<tr>
+<th><input type="text" id="amt2"></th>
+</tr>
+<tr>
+<th><button onclick="dis2()">find amount</button></th>
+</tr>
+</table>
+
+<p id="p1">
+Please select a payment option:
+</p>
+</header>
+<table align="center">
+<caption><font color="green">Payment</font></caption>
+<tr>
+<th>Enter number of items:</th>
+</tr>
+<tr>
+<th><input type="text" id="num"></th>
+</tr>
+<tr>
+<th>
+<select id="sym3">
+<option value="mastercard">MasterCard</option>
+<option value="axisbankcard">AxisBankCard</option>
+<option value="visacard">VisaCard</option>
+<option value="expresscard">ExpressCard</option>
+</select>
+</th>
+</tr>
+</center>
+<tr>
+<th>passcode(only for card payment):</th>
+</tr>
+<tr>
+<th><input type="password"  id="p" required></th>
+<tr>
+<tr>
+<th><button onclick="pay()">pay</th>
+</tr>
+</table><br><br>
+<p id="p2">
+<u>Google pay:</u><br>
+<a src="https://pay.google.com"><font color="brown">google pay</font></a>
+</p><br><br>
+<footer>
+<center><a href="main.html"><font color="purple">Click to go back</font></center>
+</footer>
+</form>
+<script>
+function dis1()
+{
+	var x=document.getElementById("sym1").value;
+	switch(x)
+	{
+	case "Macaroni": document.getElementById("amt1").value=400+(0.05*400);
+		          break;
+	case "pizza(chicken/bacon)":document.getElementById("amt1").value=450+(0.05*450);
+		break;
+	case "burger(chicken/bacon)":document.getElementById("amt1").value=250+(0.05*250);
+		break;
+	case "Biryani(chicken/mutton)":document.getElementById("amt1").value=650+(0.05*650);
+		break;
+	case "Taco(chicken/mutton)":document.getElementById("amt1").value=850+(0.05*850);
+		break;
+	case "Mutton Kulcha":document.getElementById("amt1").value=420+(0.05*420);
+		break;
+	case "Puri Mutton":document.getElementById("amt1").value=380+(0.05*380);
+		break;
+	case "Keema pav":document.getElementById("amt1").value=270+(0.05*270);
+		break;
+	case "Lasagna":document.getElementById("amt1").value=6000+(0.05*600);
+		break;
+		default:document.getElelementById("amt1").value="Please make valid choice!";
+	
+	}
+}
+	function dis2()
+	{
+		var y=document.getElementById("sym2").value;
+		switch(y)
+		{
+		case "Pizza farm house":  document.getElementById("amt2").value=350+(0.05*350);
+			                          break;
+		case "Cheese cottage Taco":  document.getElementById("amt2").value=450+(0.05*450);
+			                        break;
+		case "burger":  document.getElementById("amt2").value=200+(0.05*200);
+			                       break;
+		case "Veg Biryani":  document.getElementById("amt2").value=500+(0.05*500);
+			                      break;
+		case "Parathaa(aloo/paneer/methi)":  document.getElementById("amt2").value=300+(0.05*300);
+			                           break;
+		case "Chole Bhature":  document.getElementById("amt2").value=220+(0.05*220);
+			                            break;
+		case "Papdi Chaat":  document.getElementById("amt2").value=150+(0.05*150);
+			                     break;
+		case "Veg Lasagna":  document.getElementById("amt2").value=320+(0.05*320);
+			               break;
+			default:document.getElementById("amt2").value="Please make a valid choice!";
+		
+		}
+	}
+function pay()
+{
+	var x=parseFloat(document.getElementById("amt1").value);
+	var y=parseFloat(document.getElementById("amt2").value);
+	var b=parseFloat(document.getElementById("num").value);
+	var z=b*(x+y);
+	var a=document.getElementById("p").value;
+	if(a.length<=5)
+		{
+		
+	 if(a.charAt(0)=='3'&&a.charAt(4)=='7')
+			{
+	document.write("You have successfully paid!"+" "+z+" "+"(Now you may reload the page)");
+			}
+	 
+	 }
+		else 
+			{
+			document.write("Payment Unsuccessful!");
+			}
+			
+}
+</script>
+</body>
+</html>

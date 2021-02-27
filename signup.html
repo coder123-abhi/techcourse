@@ -1,0 +1,118 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up page</title>
+    </head>
+    <link rel="stylesheet" href="sign up.css">
+    <body>
+        <form action="main.html" autocomplete="on">
+            <header>
+                <h1>Sign In</h1><br><br>
+                <table align="center">
+                    <tr>
+                        <th>
+                            Enter name:
+                            </th>
+                    </tr>
+                    <tr>
+                        <th><input id="user" type="text" placeholder="Enter your full name" required>
+               
+                        </tr>
+                        <tr>
+                            <th>
+                                Enter password:
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input id="pw" type="password" required>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Contact number:</th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input id="num" type="text" placeholder="Enter your phone number" required>
+                                <label for="num">
+                                </th>
+                                </tr>
+                                <tr>
+                                    <th>Enter your address</th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                    <textarea rows="10" cols="30" placeholder="Enter delivery your address" required></textarea>
+                                    </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Address type:</th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            <select id="sym" required>
+                                                <option>Office address</option>
+                                                <option>Residential address</option>
+
+                                                </select>
+                                        
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                        gender:
+                                      </th>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <input type="radio" id="r1">
+                                                <label for="r1">Male</label><br>
+                                                <input type="radio" id="r2">
+                                                <label for="r2">Female</label>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                          <th>
+                                              Would you like to proceed
+                                          </th>
+                                            </tr>
+                                            <tr>
+
+                                          <th>
+                                              <input type="checkbox" required>
+                                          </th>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                   
+                                                <input type="submit" id="sub" onclick="func()" value="submit"><br><br>
+                                                
+                                                
+                                                <input type="reset" class="res" value="clear all">
+                                            
+                                            </th>    
+                                            </tr>
+
+
+                    
+                    </table><br><br><br><br>
+                   
+                </header>
+           </form>
+            <script>
+                function func(){
+                    x=document.getElementById("sym").value;
+                    if(x=="Office address")
+                    alert("You have signedup!(your office address registered)");
+                    else if(x=="Residential address")
+                    {
+                        alert("You have signedup!(your Residential address registered)");
+                    }
+                    else{
+                        alert("Please select an address type although you have registered");
+                    }
+                }
+                </script>
+                
+        </body>
+        </html>

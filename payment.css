@@ -1,0 +1,35 @@
+#h1{
+    color:yellow;
+    text-align:center;
+    vertical-align:top;
+    text-shadow:2px 2px 2px grey;
+    background-color:blue;
+    }
+    #p1{
+    font-weight:200;
+    font-size:25px;
+    text-align:center;
+    text-decoration:underline;
+    }
+    #p2
+    {
+    text-align:center;
+    color:green;
+    font-weight:200;
+    font-size:16px;
+    }
+    a:hover{
+    color:orange;
+    cursor:pointer;
+    }
+    p.p1{
+    color:brown;
+    text-align:center;
+    font-size:14px;
+    }
+    caption{
+    caption-side:top;
+    }
+    table{
+    border:2px solid grey;
+    }

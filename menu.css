@@ -1,0 +1,31 @@
+#h1{
+    text-align:center;
+    vertical-align:top;
+    color:brown;
+    }
+    body
+    {
+    background-image:url("mainimg.png");
+    color:red;
+    }
+    p.p1{
+    text-align:center;
+    color:green;
+    font-weight:200;
+    font-size:25px;
+    padding:25px 25px 25px 25px;
+    }
+    ol{
+    list-style-type:square;
+     list-style-position: inside;
+    color:yellow;
+    padding-left:540px;
+    padding-bottom:85px;
+    
+    }
+    a:hover
+    {
+    text-decoration:underline;
+    cursor:pointer;
+    color:orange;
+    }
